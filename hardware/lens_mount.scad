@@ -14,6 +14,17 @@ module rounded(size, r) {
 
 module opteka() {
     union() {
+        cylinder(r=31.06/2, h=2.70);
+        translate([0, 0,  2.70]) cylinder(r=28.66/2, h=2.9);
+        translate([0, 0,  5.60]) cylinder(r=31.06/2, h=1.2);
+        cylinder(r=18.66/2, h=10);
+        translate([0, 0, 10.00]) cylinder(r1=25/2, r2=opteka_r2, h=3);
+        translate([0, 0, 13.00]) cylinder(r=opteka_r2, h=8.42);
+    }
+}
+
+module old_opteka() {
+    union() {
         cylinder(r=23.06/2, h=7);
         translate([0, 0, 3]) cylinder(r=opteka_r1, h=2.5);
         cylinder(r=18.66/2, h=10);
